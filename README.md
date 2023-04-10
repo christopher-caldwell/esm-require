@@ -7,7 +7,8 @@ This is an example of ES Modules not working with the default setup. I have impo
 2. `yarn add -D @nrwl/node`
 3. `yarn nx g @nrwl/node:app api --tags=type:app --e2eTestRunner=none`
 4. `yarn add nanoid`
-5. `yarn nx serve api`
+5. Set the format to `esm` in the project.json
+6. `yarn nx serve api`
 
 ## Your repro steps
 
@@ -18,4 +19,8 @@ This is an example of ES Modules not working with the default setup. I have impo
 
 ## Resulting Error
 
-<img src="./screen-shot.png" />
+With the `format` set to cjs (which is the default)
+<img src="./screen-shot-cjs.png" />
+
+With the `format` set to esm
+<img src="./screen-shot-esm.png" />
